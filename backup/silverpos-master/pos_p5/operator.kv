@@ -1,7 +1,7 @@
 <FlatButton@ButtonBehavior+Label>:
     font_size: 14
 
-<MainoperatorWindow>:
+<OperatorWindow>:
     id: main_win
     orientation: 'vertical'
     canvas.before:
@@ -110,8 +110,6 @@
                 TextInput:
                     id: code_inp
                     size_hint_x: .3
-                    multiline: False
-                    on_text_validate: root.update_purchases()
                 TextInput:
                     id: disc_inp
                     size_hint_x: .1
@@ -141,7 +139,7 @@
                             pos: self.pos
                     Label:
                         text: 'Code'
-                        size_hint_x: .2
+                        size_hint_x: .3
                     Label:
                         text: 'Product name'
                         size_hint_x: .3
@@ -156,31 +154,12 @@
                         size_hint_x: .1
                     Label:
                         text: 'Product total'
-                        size_hint_x: .2
-                GridLayout:
-                    id: products
-                    cols: 1
-                
+                        size_hint_x: .1
+            BoxLayout:
+                id: products
 
 
         BoxLayout:
             id: preview
             orientation: 'vertical'
             size_hint_x: .2
-
-            TextInput:
-                id: receipt_preview
-                readonly: True
-                text: 'The Collector\n123 Main St\nKnowhere, Space\n\nTel: (555)-123-456\nReceipt No: \nDate: \n\n'
-    BoxLayout:
-        id: footer
-        size_hint_y: None
-        height: 30
-        canvas.before:
-            Color:
-                rgba: (.06, .47, .47, 1)
-            Rectangle:
-                pos: self.pos
-                size: self.size
-        Label:
-            text: 'maintained by Anas'                

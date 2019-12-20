@@ -1,7 +1,7 @@
 <FlatButton@ButtonBehavior+Label>:
     font_size: 14
 
-<MainoperatorWindow>:
+<OperatorWindow>:
     id: main_win
     orientation: 'vertical'
     canvas.before:
@@ -172,15 +172,3 @@
                 id: receipt_preview
                 readonly: True
                 text: 'The Collector\n123 Main St\nKnowhere, Space\n\nTel: (555)-123-456\nReceipt No: \nDate: \n\n'
-    BoxLayout:
-        id: footer
-        size_hint_y: None
-        height: 30
-        canvas.before:
-            Color:
-                rgba: (.06, .47, .47, 1)
-            Rectangle:
-                pos: self.pos
-                size: self.size
-        Label:
-            text: 'maintained by Anas'                

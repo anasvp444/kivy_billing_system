@@ -1,7 +1,7 @@
 <FlatButton@ButtonBehavior+Label>:
     font_size: 14
 
-<MainoperatorWindow>:
+<OperatorWindow>:
     id: main_win
     orientation: 'vertical'
     canvas.before:
@@ -30,6 +30,9 @@
             id: loggedin_user
             text: 'jdoe'
             color: (1,1,1,1)
+            size_hint_x: .1
+            underline: True
+            on_release: root.logout()
 
     BoxLayout:
         id: current
@@ -183,4 +186,4 @@
                 pos: self.pos
                 size: self.size
         Label:
-            text: 'maintained by Anas'                
+            text: 'maintained by samuelworks'
